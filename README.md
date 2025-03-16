@@ -1,5 +1,5 @@
 # PRS_cal_pipeline
-Calculate PRS by plink, now only try run one score not multiple score together
+Calculate PRS by plink, now only try run one score not multiple score in one weight file
 
 Extract SNPs from whole variants to save time, especially when need calcuate multiple scores
 
