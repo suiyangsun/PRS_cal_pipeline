@@ -8,8 +8,8 @@ SNP(CHR:POS:A1:A2 (A1 and A2 are alphabetically ordered)), Chr, Pos, effect_alle
 and example file can be found in example/example.weight.txt
 
 1. 01.extract.bgen.last.sh and 01.extract.bgen.first.sh
-   Extract the bed region from the orignial imputation or whole genome wide genotype file to save time
-   For MGB I should choose the 01.extract.bgen.last.sh, but for UKB I should choose 01.extract.bgen.first.sh
+Extract the bed region from the orignial imputation or whole genome wide genotype file to save time
+For MGB I should choose the 01.extract.bgen.last.sh, but for UKB I should choose 01.extract.bgen.first.sh
 
 3. 02.setID.sh
    Set the variant ID into chr@:#:$r:$a
