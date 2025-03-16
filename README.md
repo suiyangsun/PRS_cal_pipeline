@@ -5,7 +5,7 @@ Extract SNPs from whole variants to save time, especially when need calcuate mul
 
 The format of weight score:
 SNP(CHR:POS:A1:A2 (A1 and A2 are alphabetically ordered)), Chr, Pos, effect_allele, other_allele, effect_weight
-example file can be found in example/example.weight.txt
+and example file can be found in example/example.weight.txt
 
 1. 01.extract.bgen.last.sh and 01.extract.bgen.first.sh
    Extract the bed region from the orignial imputation or whole genome wide genotype file to save time
