@@ -1,5 +1,5 @@
 # PRS_cal_pipeline
-Calculate PRS by plink
+Calculate PRS by plink, now only try run one score not multiple score together
 
 Extract SNPs from whole variants to save time, especially when need calcuate multiple scores
 
