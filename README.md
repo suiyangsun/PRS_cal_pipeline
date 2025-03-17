@@ -55,6 +55,9 @@ Merge two files, like zcat score/{1}-sscore.gz |python KeyMapReplacer.py -k1 -a 
 
 Get the columns either by their name or by column number, like -f4,3; -f4,2-1, -f5-2; -t title1,title2,title3
 
+[GlmRegression_YS.R](https://github.com/suiyangsun/PRS_cal_pipeline/blob/main/GlmRegression_YS.R)
+
+Get the performance of PRS, including AUC, Coefficients, Incremental_Model_Rsq, Pearson_Correlation
 
 
 
