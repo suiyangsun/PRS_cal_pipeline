@@ -70,7 +70,6 @@ link="gaussian"
 full_model="$name~adjNormPRS+age+inferred_gender+genotyping_array+PC1+PC2+PC3+PC4+PC5+PC6+PC7+PC8+PC9+PC10"
 null_model="$name~age+inferred_gender+genotyping_array+PC1+PC2+PC3+PC4+PC5+PC6+PC7+PC8+PC9+PC10"
 
-
 zcat score/sscore.gz | \
   ##change the #IID to IID
   sed 's/#IID/IID/g' | \
