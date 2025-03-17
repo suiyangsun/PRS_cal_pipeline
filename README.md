@@ -67,6 +67,10 @@ name="BMI"
 #Regeression link gaussian for linear regression (continuous phenotype), bionomial for logistic regression (binary phenotype).
 link="gaussian"
 
+full_model="$name~adjNormPRS+age+inferred_gender+genotyping_array+PC1+PC2+PC3+PC4+PC5+PC6+PC7+PC8+PC9+PC10"
+null_model="$name~age+inferred_gender+genotyping_array+PC1+PC2+PC3+PC4+PC5+PC6+PC7+PC8+PC9+PC10"
+
+
 zcat score/sscore.gz | \
   ##change the #IID to IID
   sed 's/#IID/IID/g' | \
@@ -86,7 +90,7 @@ zcat score/sscore.gz | \
   python KeyMapReplacer.py -k1 -a NA -p<(cat $pheno) -x | \
   ##only get the phenotype needed for fit the model
   python wcut.py -t '$name,adjNormPRS,age,inferred_gender,genotyping_array,PC1,PC2,PC3,PC4,PC5,PC6,PC7,PC8,PC9,PC10' | \
-  Rscript GlmRegression_YS.R -f '$name~adjNormPRS+age+inferred_gender+genotyping_array+PC1+PC2+PC3+PC4+PC5+PC6+PC7+PC8+PC9+PC10' -m $link -n '$name~age+inferred_gender+genotyping_array+PC1+PC2+PC3+PC4+PC5+PC6+PC7+PC8+PC9+PC10' -r y -p y -a AUC -t $name |
+  Rscript GlmRegression_YS.R -f $full_model -m $link -n $null_model -r y -p y -a AUC -t $name |
   tee result/$name.log
 ```
 
