@@ -11,7 +11,7 @@ and example file can be found in example/example.weight.txt
 
    Extract the bed region from the orignial imputation or whole genome wide genotype file to save time
 
-   For MGB I should choose the 01.extract.bgen.last.sh, but for UKB I should choose 01.extract.bgen.first.sh
+   For MGB I should choose the [01.extract.bgen.last.sh](https://github.com/suiyangsun/PRS_cal_pipeline/blob/main/01.extract.bgen.last.sh), but for UKB I should choose [01.extract.bgen.first.sh](https://github.com/suiyangsun/PRS_cal_pipeline/blob/main/01.extract.bgen.first.sh)
 
 
 2. [02.setID.sh](https://github.com/suiyangsun/PRS_cal_pipeline/blob/main/02.setID.sh)
