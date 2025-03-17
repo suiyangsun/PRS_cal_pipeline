@@ -47,6 +47,18 @@ Extract residulas from linear regression. Like PRS ~ PC1 + PC2
 
 Normolize column by scale.
 
+[KeyMapReplacer.py](https://github.com/suiyangsun/PRS_cal_pipeline/blob/main/KeyMapReplacer.py) 
+
+Merge two files, like zcat score/{1}-sscore.gz |python KeyMapReplacer.py -k1 -a NA -p<(cat $pheno) -x
+
+[wcut.py](https://github.com/suiyangsun/PRS_cal_pipeline/blob/main/wcut.py)
+
+Get the columns either by their name or by column number, like -f4,3; -f4,2-1, -f5-2; -t title1,title2,title3
+
+
+
+
+
 
 
 
