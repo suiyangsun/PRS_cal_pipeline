@@ -49,7 +49,7 @@ out=/medpop/esp2/yang/project/EC_PRS/UKB/all/UKB.chr${i}
 
 ######extract the bed file
 sh /medpop/esp2/yang/project/PRS_pipeline/01.extract.bgen.first.sh \
-$plink2 $bgen sample $extract $out
+$plink2 $bgen $sample $extract $out
 
 
 done
