@@ -175,7 +175,7 @@ do
 cat /medpop/esp2/yang/project/EC_PRS/UKB/sscore_SQ/${pheno}_chr*.sscore \
 |grep -v "#IID" > /medpop/esp2/yang/project/EC_PRS/UKB/sscore_SQ/chrall.${pheno}.all.sscore
 
-Rscript /medpop/esp2/yang/project/cli_trail/script/combinechr.R \
+Rscript /medpop/esp2/yang/project/cli_trail/script/05.combinechr.R \
 /medpop/esp2/yang/project/EC_PRS/UKB/sscore_SQ/chrall.${pheno}.all.sscore \
 /medpop/esp2/yang/project/EC_PRS/sscore_clean/UKB_sum.chrall.${pheno}.all.sscore
 
