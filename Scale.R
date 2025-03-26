@@ -17,7 +17,8 @@ Options:
 ## Auto-detect and install needed packages.
 ## Written by someone
 options (warn = -1)
-if (!require("pacman")) install.packages("pacman")
+.libPaths(c("rpackage_score",.libPaths()))
+#if (!require("pacman")) install.packages("pacman")
 suppressMessages(library(pacman))
 pacman::p_load(docopt,data.table)
 
