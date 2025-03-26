@@ -78,7 +78,7 @@ zcat score/sscore.gz | \
   ##change the raw PRS name into PRS
   sed 's/effect_weight_SUM/PRS/g' | \
   ##only get the PCs to minimum to remove NA
-  wcut -t'IID,PRS,PC1,PC2,PC3,PC4,PC5,PC6,PC7,PC8,PC9,PC10' | \
+  python wcut.py -t'IID,PRS,PC1,PC2,PC3,PC4,PC5,PC6,PC7,PC8,PC9,PC10' | \
   ##regress out top 10 PCs or 4 PCs
   Rscript Residuals_YS.R -f 'PRS~PC1+PC2+PC3+PC4+PC5+PC6+PC7+PC8+PC9+PC10' -t adjPRS | \
   ##normalize adjPRS
