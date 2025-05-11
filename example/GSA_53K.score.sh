@@ -35,7 +35,7 @@ do
 awk -v OFS="\t" -v var="$i" '$1==var' /medpop/esp2/yang/project/EC_PRS/GSA_53K/all/hg38.all.bed \
 > /medpop/esp2/yang/project/EC_PRS/GSA_53K/all/chr$i.hg38.all.bed
 
-
+plink2='/medpop/esp2/yang/software/plink2.231029/plink2'
 bgen=$im/GSA_53K.merged.chr${i}.bgen
 sample=$im/GSA_53K.merged.chr${i}.sample
 extract=/medpop/esp2/yang/project/EC_PRS/GSA_53K/all/chr$i.hg38.all.bed
@@ -44,7 +44,7 @@ out=/medpop/esp2/yang/project/EC_PRS/GSA_53K/all/GSA_53K.chr${i}
 
 ######extract the bed file
 sh /medpop/esp2/yang/project/PRS_pipeline/01.extract.bgen.last.sh \
-$plink2 $bgen sample $extract $out
+$plink2 $bgen $sample $extract $out
 
 
 done
