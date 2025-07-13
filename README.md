@@ -59,12 +59,12 @@ Get the columns either by their name or by column number, like -f4,3; -f4,2-1, -
 
 Get the performance of PRS, including AUC, Coefficients, Incremental_Model_Rsq, Pearson_Correlation
 
-***Notice: Regeression link gaussian for linear regression (continuous phenotype), bionomial for logistic regression (binary phenotype).***
+***Notice: Regeression link gaussian for linear regression (continuous phenotype), binomial for logistic regression (binary phenotype).***
 
 The example is:
 ```
 name="BMI"
-#Regeression link gaussian for linear regression (continuous phenotype), bionomial for logistic regression (binary phenotype).
+#Regeression link gaussian for linear regression (continuous phenotype), binomial for logistic regression (binary phenotype).
 link="gaussian"
 
 full_model="$name~adjNormPRS+age+inferred_gender+genotyping_array+PC1+PC2+PC3+PC4+PC5+PC6+PC7+PC8+PC9+PC10"
