@@ -93,6 +93,34 @@ zcat score/sscore.gz | \
   tee result/$name.log
 ```
 
+## Get locally optimized polygenic risk scores
+
+[WeightedScore.R](https://github.com/suiyangsun/PRS_cal_pipeline/blob/main/WeightedScore.R)
+
+Run R script for weighted score calculation with cv.glmnet
+alpha = 0.5 for Elastic Net, 0 for Ridge, 1 for Lasso
+
+The example is:
+```
+name="Lasso"
+anum=1
+
+# Step 1: Unzip the PRS file
+zcat $PC4.adjNorm.PRS.join.txt.gz > $unzipped_file
+
+
+# Step 2: Filter the columns 'IID' and 'Has_cad'
+cat $pheno_file | \
+$script_dir/wcut -t 'IID,Has_cad' | \
+
+# Step 3: Combine PRS file with phenotype file
+python KeyMapReplacer.py -k1 -a NA -p $unzipped_file -x | \
+
+# Step 4: Run R script for weighted score calculation
+Rscript WeightedScore.R -m binomial -a $anum 2> /dev/stderr > $out_dir/$name.weighted.score.txt
+
+```
+
 
 
 
